@@ -1,0 +1,20 @@
+Package: ROSC
+Type: Package
+Title: Build and Parse Open Sound Control (OSC) Messages
+Version: 0.0.0.9000
+Depends: R (>= 3.1.0)
+Imports: rlang (>= 0.2.1)
+Author: Eric Marty <marty@ericmarty.com>
+Maintainer: Eric Marty <marty@ericmarty.com>
+Description: This package contains functions for writing and parsing messages 
+    in the Open Sound Control (OSC) format. 
+    OSC <http://opensoundcontrol.org/> is a transport-independent, message-oriented 
+    communication protocol for communication among software applications and devices.
+    OSC is differentiaed from the related encodings XML, JSON, YMAL, MIME and MIDI by 
+    use of regular expressions and pattern-matching for dispatching, and by temporal 
+    and atomicity semantics. This package partially implements the OSC 1.1 Encoding Specification
+    <http://cnmat.berkeley.edu/content/open-sound-control-11-encoding-specification>.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
