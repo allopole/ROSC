@@ -3,7 +3,7 @@ ROSC
 ====
 
 ROSC is intended to build and parse messages in the Open Sound Control
-(OSC) protocol.
+(OSC) protocol in R.
 
 Currently, only building messages is implemented. ROSC builds string
 representations of OSC Messages that can then be passed to an external
