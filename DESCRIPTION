@@ -6,6 +6,8 @@ Depends: R (>= 3.1.0)
 Imports: rlang (>= 0.2.1)
 Author: Eric Marty <marty@ericmarty.com>
 Maintainer: Eric Marty <marty@ericmarty.com>
+URL: https://github.com/allopole/ROSC
+BugReports: https://github.com/allopole/ROSC/issues
 Description: This package contains functions for writing and parsing messages 
     in the Open Sound Control (OSC) format. 
     OSC <http://opensoundcontrol.org/> is a transport-independent, message-oriented 
