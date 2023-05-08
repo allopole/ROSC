@@ -23,7 +23,7 @@ Currently, only building messages is implemented. ROSC builds string representat
 ## About OSC
 
 Open Sound Control (OSC) is a transport-independent, message-oriented communication protocol for communication among computers, devices.
-OSC is differentiaed from the related encodings XML, JSON, YMAL, MIME and MIDI by 
+OSC is differentiated from the related encodings XML, JSON, YMAL, MIME and MIDI by 
 use of regular expressions and pattern-matching for dispatching,
 and by temporal and atomicity semantics.
 This package partially implements the OSC 1.1 Encoding Specification
@@ -31,13 +31,13 @@ This package partially implements the OSC 1.1 Encoding Specification
 
 <http://opensoundcontrol.org/>  
 
-Many applications, most programming environmnts, and numerous devices (including sensor/actuator interfaces such as arduino) have OSC client and/or server implementations.
+Many applications, most programming environments, and numerous devices (including sensor/actuator interfaces such as Arduino) have OSC client and/or server implementations.
 
 See:  
 <http://opensoundcontrol.org/implementations>  
 <https://en.wikipedia.org/wiki/Open_Sound_Control#Applications>
 
-Python, Matlab, and many other computing languages have OSC implmentations.
+Python, Matlab, and many other computing languages have OSC implementations.
 
 R does not (yet), so here is a first attempt to remedy that.
 
@@ -47,6 +47,7 @@ R does not (yet), so here is a first attempt to remedy that.
 
 * `oscMessage` - Build OSC Message from user supplied data, address pattern, and optional type tag string  
 * `oscType` - Helper function to calculate an OSC Type Tag String from user supplied data
+
 * `listFlatten` - Helper function to recursively flatten a list (and vector list elements) into a single-level list of elements each of length 1.
 
 ### Not (yet) supported:

@@ -1,6 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-ROSC
-====
+
+# ROSC
 
 ROSC is intended to build and parse messages in the Open Sound Control
 (OSC) protocol in R.
@@ -9,12 +9,11 @@ Currently, only building messages is implemented. ROSC builds string
 representations of OSC Messages that can then be passed to an external
 function that encodes OSC for transport.
 
-About OSC
----------
+## About OSC
 
 Open Sound Control (OSC) is a transport-independent, message-oriented
 communication protocol for communication among computers, devices. OSC
-is differentiaed from the related encodings XML, JSON, YMAL, MIME and
+is differentiated from the related encodings XML, JSON, YMAL, MIME and
 MIDI by use of regular expressions and pattern-matching for dispatching,
 and by temporal and atomicity semantics. This package partially
 implements the OSC 1.1 Encoding Specification
@@ -22,8 +21,8 @@ implements the OSC 1.1 Encoding Specification
 
 <http://opensoundcontrol.org/>
 
-Many applications, most programming environmnts, and numerous devices
-(including sensor/actuator interfaces such as arduino) have OSC client
+Many applications, most programming environments, and numerous devices
+(including sensor/actuator interfaces such as Arduino) have OSC client
 and/or server implementations.
 
 See:  
@@ -31,19 +30,20 @@ See:
 <https://en.wikipedia.org/wiki/Open_Sound_Control#Applications>
 
 Python, Matlab, and many other computing languages have OSC
-implmentations.
+implementations.
 
 R does not (yet), so here is a first attempt to remedy that.
 
-Building OSC Messages
----------------------
+## Building OSC Messages
 
 ### Functions
 
 -   `oscMessage` - Build OSC Message from user supplied data, address
     pattern, and optional type tag string  
+
 -   `oscType` - Helper function to calculate an OSC Type Tag String from
     user supplied data
+
 -   `listFlatten` - Helper function to recursively flatten a list (and
     vector list elements) into a single-level list of elements each of
     length 1.
@@ -63,14 +63,12 @@ See
 <http://www.cnmat.berkeley.edu/sites/default/files/attachments/2015_Dynamic_Message_Oriented_Middleware.pdf>
 for a description. This should be a separate package.
 
-Parsing (Dispatching) Messages
-------------------------------
+## Parsing (Dispatching) Messages
 
 Not yet implemented. This will require writing functions to dispatch OSC
 Address Patterns and convert OSC arguments to R data types.
 
-Example building OSC Messages with `ROSC`
------------------------------------------
+## Example building OSC Messages with `ROSC`
 
 ``` r
 library(ROSC)
@@ -95,8 +93,7 @@ OSC4 <- oscMessage(address = address, data = data3, double = "f") # convert doub
 OSC5 <- oscMessage(address = address, data = data3, logical = "integer") # convert logical to ints
 ```
 
-Sending OSC over UDP
---------------------
+## Sending OSC over UDP
 
 OSC is transport-independant, but it typically sent over UDP, and less
 often over TCP. UDP is chosen for many applications because of the lower
@@ -104,16 +101,14 @@ latency (at the expenses of a theoretical possibility of occasional lost
 packets), and because of the ability to broadcast without the need for
 first establishing a connection, simplifying communication.
 
-OSC over UDP in native R
-------------------------
+## OSC over UDP in native R
 
 Unlike TCP socket connections, UDP is not natively supported in R. UDP
 clients and servers can be written in RCPP, but none that implement OSC
 compliant packets have yet been built. This should be be on a to-do list
 for interested R developers.
 
-OSC over UDP via Bash command `oscchief`:
------------------------------------------
+## OSC over UDP via Bash command `oscchief`:
 
 ### Dependencies:
 
@@ -203,8 +198,7 @@ oscchief.send(host=HOST, port=PORT, osc=OSC4)
 oscchief.send(host=HOST, port=PORT, osc=OSC5)
 ```
 
-Listen to OSC Messages coming from R over UDP
----------------------------------------------
+## Listen to OSC Messages coming from R over UDP
 
 ### Listen in a terminal with `osccheif`:
 
